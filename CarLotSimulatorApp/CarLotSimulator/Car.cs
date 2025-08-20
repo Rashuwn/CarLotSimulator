@@ -4,6 +4,11 @@ namespace CarLotSimulator;
 
 public class Car
 {
+
+    public Car()
+    {
+        CarLot.numberOfCars++;
+    }
     public int Year { get; set; }
     public string Make { get; set; }
     public string Model { get; set; }
@@ -24,11 +29,7 @@ public class Car
         HonkNoise = honkNoise;
         Console.WriteLine($"{Make} {Model} has a honk noise that sounds like {HonkNoise}");
     }
-
-    public Car()
-    {
-        
-    }
+    
 
     public Car(string make, string model, int year, bool isDriveable)
     {
